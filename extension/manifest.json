@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "X 视频一键下载",
+  "version": "0.2.3",
+  "description": "在 X / Twitter 帖子旁保存 MP4 视频或 MP3 音轨，支持清晰度选择与本机音频转换。",
+  "minimum_chrome_version": "116",
+  "permissions": ["downloads", "storage", "activeTab", "offscreen", "clipboardRead"],
+  "host_permissions": ["https://cdn.syndication.twimg.com/*", "https://video.twimg.com/*"],
+  "content_security_policy": {"extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; worker-src 'self'; connect-src 'self' https://cdn.syndication.twimg.com https://video.twimg.com"},
+  "background": {"service_worker": "background.js"},
+  "action": {"default_popup": "popup.html", "default_title": "X 视频下载"},
+  "icons": {"16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png"},
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://www.x.com/*", "https://twitter.com/*", "https://www.twitter.com/*"],
+      "js": ["media-core.js", "page-hook.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://x.com/*", "https://www.x.com/*", "https://twitter.com/*", "https://www.twitter.com/*"],
+      "js": ["media-core.js", "content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

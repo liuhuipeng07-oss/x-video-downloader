@@ -1,0 +1,4 @@
+node_modules/
+verification/*
+!verification/.gitkeep
+*.zip

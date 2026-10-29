@@ -1,0 +1,30 @@
+{
+  "id_str": "1234567890123456789",
+  "mediaDetails": [
+    {
+      "id_str": "123456789",
+      "type": "video",
+      "media_url_https": "https://pbs.twimg.com/media/example.jpg",
+      "video_info": {
+        "duration_millis": 8381,
+        "variants": [
+          {
+            "content_type": "video/mp4",
+            "bitrate": 632000,
+            "url": "https://video.twimg.com/ext_tw_video/123/vid/320x568/example.mp4"
+          },
+          {
+            "content_type": "video/mp4",
+            "bitrate": 950000,
+            "url": "https://video.twimg.com/ext_tw_video/123/vid/480x852/example.mp4"
+          },
+          {
+            "content_type": "video/mp4",
+            "bitrate": 2176000,
+            "url": "https://video.twimg.com/ext_tw_video/123/vid/720x1280/example.mp4"
+          }
+        ]
+      }
+    }
+  ]
+}

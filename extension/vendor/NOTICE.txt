@@ -1,0 +1,7 @@
+Mediabunny and @mediabunny/mp3-encoder 1.63.0: MPL-2.0
+https://github.com/Vanilagy/mediabunny/tree/v1.63.0
+Sources are available from the version-pinned npm packages and the above repository.
+MP3 encoding uses LAME 3.100, LGPL: https://lame.sourceforge.io/
+The MP3 encoder is modified only to load its worker from a packaged file.
+See build.mjs in the provided source project for the exact modification.
+No runtime scripts are fetched from third-party servers.
